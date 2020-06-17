@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="help">Helpful notes will appear here</p>
+    <p>E-mail: <input type="text" id="email" name="email"></p>
+    <p>Name: <input type="text" id="name" name="name"></p>
+    <p>Age: <input type="text" id="age" name="age"></p>
+</body>
+<script>
+    function showHelp(help) {
+        document.getElementById('help').innerHTML = help;
+    }
+    // function makeHelpCallback(help) {
+    //     return function() {
+    //         showHelp(help);
+    //     };
+    // }
+    function setupHelp() {
+        var helpText = [
+            { 'id': 'email', 'help': 'Your e-mail address' },
+            { 'id': 'name', 'help': 'Your full name' },
+            { 'id': 'age', 'help': 'Your age (you must be over 16)' }
+        ];
+        for (var i = 0; i < helpText.length; i++) {
+            //匿名闭包
+            // (function(){
+            //     var item = helpText[i];
+            //     document.getElementById(item.id).onfocus = function (){
+            //         showHelp(item.help)
+            //     };
+            // })()
+            let item = helpText[i];
+            document.getElementById(item.id).onfocus = function (){
+                showHelp(item.help)
+            };
+        }
+    }
+
+    setupHelp();
+    var makeCounter = function () {
+        var privateCounter = 0;
+        function changeBy(val) {
+            privateCounter += val;
+        }
+        return {
+            increment: function () {
+                changeBy(1);
+            },
+            decrement: function () {
+                changeBy(-1);
+            },
+            value: function () {
+                return privateCounter;
+            }
+        }
+    };
+    let Counter1 = makeCounter()
+    let Counter2 = makeCounter()
+    Counter1.increment()
+    Counter1.increment()
+    Counter1.increment()
+    Counter2.increment()
+    console.log(Counter1.value())
+    console.log(Counter2.value())
+</script>
+
+</html>

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html,
+  body,
+  #app,
+  // #app>div,
+  .full-screen>div {
+    height: 100%;
+  }
+  
+  body {
+    font-size: 14px!important;
+    background-color: #F2F2F2;
+    color: #333;
+  }
+  
+  // #app>div {
+  //   padding: 82px 15px 0;
+  //   &:nth-child(1){
+  //     padding: 15px;
+  //   }
+  // }
+  ul,
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    vertical-align: middle;
+    content: normal !important;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+  
+  i {
+    font-style: normal;
+  }
+  
+  input {
+    outline: none;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  input,
+  textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+  
+  input::-webkit-input-placeholder {
+    color: #999;
+  }
+  
+  input:-moz-placeholder {
+    color: #999;
+  }
+  
+  input::-moz-placeholder {
+    color: #999;
+  }
+  
+  input:-ms-input-placeholder {
+    color: #999;
+  }
+  
+  textarea::-webkit-input-placeholder {
+    color: #999;
+  }
+  
+  textarea:-moz-placeholder {
+    color: #999;
+  }
+  
+  textarea::-moz-placeholder {
+    color: #999;
+  }
+  
+  textarea:-ms-input-placeholder {
+    color: #999;
+  }
+  
+  .clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+  
+  .clearfix {
+    zoom: 1;
+  }
+  
+  .fl {
+    float: left;
+  }
+  
+  .fr {
+    float: right;
+  }
+  
+  .handle-box {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: $theme-color;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .error{
+    background-color: #fe5d5d;
+  }
+  .success{
+    background-color: #0db64d;
+  }
+  .warn{
+    background-color: #fc940e;
+  }

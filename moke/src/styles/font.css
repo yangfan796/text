@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'wxz';
+    src: url('../font/wxz.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+#text{
+    font-family: 'wxz';
+}
